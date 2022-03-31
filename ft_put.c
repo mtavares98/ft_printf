@@ -6,7 +6,7 @@
 /*   By: mtavares <mtavares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 11:47:26 by mtavares          #+#    #+#             */
-/*   Updated: 2022/03/13 17:29:10 by mtavares         ###   ########.fr       */
+/*   Updated: 2022/03/27 19:55:45 by mtavares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ int	ft_putnbr(int n, char *str, int numdig)
 	return ((n < 0) + ft_writenbr(n, str, numdig));
 }
 
-int	ft_putllunbr_base(t_llu n, char *str, int base, int numdig)
+int	ft_putlunbr_base(t_lu n, char *str, int base, int numdig)
 {
-	if (n > (t_llu) base - 1)
-		numdig += ft_putllunbr_base(n / base, str, base, numdig);
+	if (n > (t_lu) base - 1)
+		numdig += ft_putlunbr_base(n / base, str, base, numdig);
 	write(1, &str[n % base], 1);
 	return (++numdig);
 }
