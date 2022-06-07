@@ -6,7 +6,7 @@
 /*   By: mtavares <mtavares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 10:18:33 by mtavares          #+#    #+#             */
-/*   Updated: 2022/03/27 19:54:45 by mtavares         ###   ########.fr       */
+/*   Updated: 2022/06/07 22:11:27 by mtavares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 static int	ft_format(const char *str, int i, va_list *args)
 {
-	int	count;
-
-	count = 0;
 	if (str[i] == 'c')
 		return (ft_putstr(0, va_arg(*args, int), CHAR));
 	if (str[i] == 's')
